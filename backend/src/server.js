@@ -18,7 +18,6 @@ app.use(express.json());
 
 dbConnect();
 
-
 app.use("/api", authRoutes);
 app.use("/api", postRoutes);
 

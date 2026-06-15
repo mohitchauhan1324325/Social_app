@@ -29,8 +29,6 @@ function Feed() {
 
         try {
 
-            setLoading(true);
-
             const { data } =
                 await api.get(
                     `/?page=${pageNumber}`
@@ -46,19 +44,8 @@ function Feed() {
 
             console.log(error);
 
-        } finally {
-
-            setLoading(false);
         }
     };
-
-    if (loading) {
-        return (
-            <div className="loader">
-                Loading Posts...
-            </div>
-        );
-    }
 
     return (
         <>
