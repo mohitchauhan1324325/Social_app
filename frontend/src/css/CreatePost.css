@@ -1,0 +1,74 @@
+.create-post-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.create-post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.post-textarea {
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.post-textarea:focus {
+    border-color: #1877f2;
+}
+
+.post-image-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.post-image-input:focus {
+    border-color: #1877f2;
+}
+
+.post-submit-btn {
+    align-self: flex-end;
+    background: #1877f2;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.post-submit-btn:hover {
+    background: #166fe5;
+}
+
+@media (max-width: 768px) {
+    .post-submit-btn {
+        width: 100%;
+    }
+}
+
+.preview-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.post-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
