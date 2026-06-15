@@ -1,4 +1,4 @@
-import jwt from "JsonWebToken";
+import jwt from "jsonwebtoken";
 
 const protect = (req, res, next) => {
 
