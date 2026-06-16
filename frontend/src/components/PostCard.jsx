@@ -47,8 +47,8 @@ function PostCard({ post, fetchPosts }) {
     };
 
     const latestComment =
-        post.comments?.[
-        post.comments.length - 1
+        post?.comments?.[
+        post?.comments?.length - 1
         ];
 
     return (
@@ -62,7 +62,7 @@ function PostCard({ post, fetchPosts }) {
 
                 <div className="user-info">
 
-                    <h3>{post.user.name}</h3>
+                    <h3>{post?.user?.name}</h3>
 
                     <p className="post-time">
                         {formatDistanceToNow(
@@ -75,16 +75,16 @@ function PostCard({ post, fetchPosts }) {
 
             </div>
 
-            {post.message && (
+            {post?.message && (
                 <p className="post-message">
-                    {post.message}
+                    {post?.message}
                 </p>
             )}
 
-            {post.image?.url && (
+            {post?.image?.url && (
                 <img
                     className="post-image"
-                    src={post.image.url}
+                    src={post?.image?.url}
                     alt="post"
                 />
             )}
@@ -95,7 +95,7 @@ function PostCard({ post, fetchPosts }) {
                     className="like-btn"
                     onClick={likeHandler}
                 >
-                    👍 {post.likes.length}
+                    👍 {post?.likes?.length}
 
                 </button>
 
@@ -108,24 +108,24 @@ function PostCard({ post, fetchPosts }) {
                         )
                     }
                 >
-                    💬 {post.comments.length}
+                    💬 {post?.comments?.length}
                     {" "}
                     Comments
                 </span>
 
             </div>
-            {post.likes.length > 0 && (
+            {post?.likes?.length > 0 && (
                 <div className="likes-list">
 
                     ❤️ Liked by{" "}
 
-                    {post.likes
+                    {post?.likes
                         .slice(0, 3)
                         .map((user) => user.name)
                         .join(", ")}
 
-                    {post.likes.length > 3 &&
-                        ` and ${post.likes.length - 3
+                    {post?.likes.length > 3 &&
+                        ` and ${post?.likes.length - 3
                         } others`}
                 </div>
             )}
